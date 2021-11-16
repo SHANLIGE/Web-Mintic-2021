@@ -1,20 +1,20 @@
 import React from 'react'
-import { BrowserRouter as Router, Route , Routes } from 'react-router-dom';
-import Login from './pages/Login';
-import Productos from './pages/Productos'
-import Usuarios from './pages/Usuarios';
-import Ventas from './pages/Ventas'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Login from '../src/pages/Login';
+import Usuarios from '../src/pages/Usuarios';
+import Productos from '../src/pages/Productos';
+import Ventas from '../src/pages/Ventas';
 
 
 const App = () =>{
   return(
     <Router>
       <Routes>
-          <Route exact path="/login" component ={Login} />
-          <Route exact path="/usuarios" component ={Usuarios} />
-          <Route exact path= "/ventas" component ={Ventas} />
-          <Route exact path= "/productos" component ={Productos} />
-      </Routes>    
+        <Route path='/login' element={<Login/>}/>
+        <Route path='/usuarios' element={<Usuarios/>}/>
+        <Route path='/productos' element={<Productos/>} />
+        <Route path='/ventas' element={<Ventas/>}/>
+        </Routes>
     </Router>
 
     
